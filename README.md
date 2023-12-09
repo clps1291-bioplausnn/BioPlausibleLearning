@@ -20,4 +20,5 @@ Reference:
 
 2.https://en.wikipedia.org/wiki/MNIST_database
 
-3.
+
+Except for torchvision models, [GluonCV](https://github.com/dmlc/gluon-cv/tree/master/gluoncv/model_zoo) includes many sota models in CV.
