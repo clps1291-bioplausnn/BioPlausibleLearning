@@ -111,6 +111,14 @@ class SemiHebbNet(nn.Module):
         x = self.HebbNet(x)
         output = self.FCN(x)
         return output,x
+    
+    # Propagate the change of require_hebb property to the HebbNet component
+    def set_require_hebb(self, require_hebb):
+        if hasattr(self.HebbNet, 'set_require_hebb'):
+            self.HebbNet.set_require_hebb(require_hebb)
+    
+
+
 
 # Krotov
 

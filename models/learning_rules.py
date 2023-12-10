@@ -41,7 +41,8 @@ class HebbLayer(nn.Module):
      # 1.naive hebbian learning rule
      def hebb_update(self,x):
          z = self.get_product(x) # (bs,50)
-         self.weights.data += self.lr * torch.matmul(x.t(),z) # (bs,784).T x (bs,50) --> (784,50)
+         self.weights.data += self.lr * torch.matmul(x.t(),z) # (bs,784).T x (bs,50) --> (784,50) 
+         ## Consider torch.einsum for tensor/matrix multiplication ##
 
      # 2.Oja's rule
      def oja_update(self,x):
@@ -55,11 +56,11 @@ class HebbLayer(nn.Module):
          delta_w = self.lr * torch.matmul(x.t(), z) 
          # thresholding
          if self.stimuli_times>1:
-             delta_w -= 1/(self.stimuli_times-1) * self.past_product_sum
+             delta_w -= self.past_product_sum /(self.stimuli_times-1)
          # gradient sparsity
          threshold = self.find_percentile(delta_w)
          mask = delta_w >= threshold
-         delta_w *= mask 
+         delta_w *= mask
          self.weights.data += delta_w
          self.record_stimuli(product=torch.matmul(x.t(), z))
      

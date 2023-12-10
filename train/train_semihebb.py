@@ -18,16 +18,25 @@ def train_semihebb(model, train_loader, test_loader, optimizer, loss_func, epoch
 
     for epoch in range(epochs):
         model.train()
+        model.set_require_hebb(True)
         for step, (b_x, b_y) in enumerate(train_loader):
             b_x = b_x.view(b_x.size(0), -1)
+            #print('before forward:')
+            #print_model_weights(model=model)
             output = model(b_x)[0]   # output in shape of (50,10)
+            #print('after forward:')
+            #print_model_weights(model=model)
             loss = loss_func(output, b_y)
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
+            #print('after bp:')
+            #print_model_weights(model=model)
+
 
             if step % 50 == 0:
                 model.eval()
+                model.set_require_hebb(False)
                 with torch.no_grad():
                     correct = 0
                     total = 0
