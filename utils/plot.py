@@ -32,3 +32,16 @@ def plot_with_labels(lowDWeights, labels):
     for x, y, s in zip(X, Y, labels):
         c = cm.rainbow(int(255 * s / 9)); plt.text(x, y, s, backgroundcolor=c, fontsize=9)
     plt.xlim(X.min(), X.max()); plt.ylim(Y.min(), Y.max()); plt.title('Visualize last layer'); plt.show(); plt.pause(0.01)
+
+def plot_score_comparison(x_axis,accuracies):
+    plt.figure(figsize=(10, 6))
+    plt.plot(x_axis, accuracies, marker='o')
+
+    plt.title('Model Accuracy Comparison')
+    plt.xlabel('Ratio of Hebbian Layers (#HebbLayers/#Total Layers)')
+    plt.ylabel('Accuracy')
+    plt.grid(True)
+    plt.xticks(x_axis)
+    plt.ylim(0, 1) 
+
+    plt.show()

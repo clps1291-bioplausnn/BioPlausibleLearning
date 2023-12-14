@@ -4,40 +4,40 @@ import torch.nn as nn
 
 class HebbLayer(nn.Module):
      def __init__(self, input_dim, output_dim, lr, require_hebb=True, activation=True, update_rule='hebb', p=None):
-         super(HebbLayer, self).__init__()
-         # Initialize weights
-         self.weights = nn.Parameter(torch.randn(input_dim, output_dim) * 0.01, requires_grad=False)
-         self.require_hebb = require_hebb
-         self.past_product_sum = torch.zeros_like(self.weights.data)
-         self.stimuli_times = 0
-         self.relu = nn.ReLU()
-         self.activation = activation
-         self.lr = lr
-         self.update_rule = update_rule
-         self.p = p
+        super(HebbLayer, self).__init__()
+        # Initialize weights
+        self.weights = nn.Parameter(torch.randn(input_dim, output_dim) * 0.01, requires_grad=False)
+        self.require_hebb = require_hebb
+        self.past_product_sum = torch.zeros_like(self.weights.data)
+        self.stimuli_times = 0
+        self.relu = nn.ReLU()
+        self.activation = activation
+        self.lr = lr
+        self.update_rule = update_rule
+        self.p = p
 
-         # mapping
-         self.update_methods = {
-             'hebb': self.hebb_update,
-             'oja': self.oja_update,
-             'gupta': self.gupta_update,
-             'modified_gupta': self.modified_gupta_update
-         }
+        # mapping
+        self.update_methods = {
+            'hebb': self.hebb_update,
+            'oja': self.oja_update,
+            'gupta': self.gupta_update,
+            'modified_gupta': self.modified_gupta_update
+        }
 
-         # Validate the selected update rule
-         if update_rule not in self.update_methods:
-             raise ValueError("Invalid update rule specified")
+        # Validate the selected update rule
+        if update_rule not in self.update_methods:
+            raise ValueError("Invalid update rule specified")
 
         
      def forward(self, x):
-         z = self.get_product(x)
-         if self.require_hebb:
-             update_method = self.update_methods.get(self.update_rule)
-             if update_method:
-                 update_method(x)
-             else:
-                 raise ValueError(f"Update rule {self.update_rule} not implemented")
-         return z
+        z = self.get_product(x)
+        if self.require_hebb:
+            update_method = self.update_methods.get(self.update_rule)
+            if update_method:
+                update_method(x)
+            else:
+                raise ValueError(f"Update rule {self.update_rule} not implemented")
+        return z
      
      # 1.naive hebbian learning rule
      def hebb_update(self,x):

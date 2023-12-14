@@ -16,6 +16,7 @@ from utils.save_model import *
 def train_semihebb(model, train_loader, test_loader, optimizer, loss_func, epochs, tsne_enabled=False):
     plt.ion()  # Interactive mode on
 
+    accuracies = []
     for epoch in range(epochs):
         model.train()
         model.set_require_hebb(True)
@@ -49,6 +50,7 @@ def train_semihebb(model, train_loader, test_loader, optimizer, loss_func, epoch
 
                     accuracy = 100 * correct / total
                     print(f'Epoch: {epoch}, Step: {step}, Loss: {loss.item()}, Accuracy: {accuracy}%')
+                    accuracies.append(round(accuracy/100,2))
 
                     if tsne_enabled:
                         # Visualization of trained flatten layer (T-SNE)
@@ -59,7 +61,8 @@ def train_semihebb(model, train_loader, test_loader, optimizer, loss_func, epoch
                         labels = test_y.numpy()[:plot_only]
                         plot_with_labels(low_dim_embs, labels)
 
-    plt.ioff()  
+    plt.ioff()
+    return accuracies
 
 
 

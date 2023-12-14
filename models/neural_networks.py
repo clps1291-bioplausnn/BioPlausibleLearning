@@ -23,7 +23,7 @@ class FCN(nn.Module):
             self.load_state_dict(state_dict)
 
     def forward(self, x): 
-        return self.model(x)
+        return self.model(x) 
 
 
 # A naive HebbNet: Pure HebbLayers
@@ -71,7 +71,7 @@ class ConvLayers(nn.Module):
 
     def forward(self, x):
         return self.model(x)
-    
+
 
 # ---------------------------------------------------------- Stage 2: Put things together --------------------------------------------------------------
 # A naive CNN: Conv2d, ReLU, MaxPool2d, fc layers
@@ -88,11 +88,11 @@ class CNN(nn.Module):
             self.load_state_dict(state_dict)
 
     def forward(self, x):
-        x = self.conv_layers(x)
+        x = self.conv_layers(x) 
         x = x.view(x.size(0), -1)           # flatten
-        output = self.fc(x)
+        output = self.fc(x)  
  
-        return output,x   
+        return output,x
     
 # A naive SemiHebbNet: a hybrid approach composed of Hebbian learning + bp trained fc layers 
 class SemiHebbNet(nn.Module):

@@ -30,4 +30,7 @@ def test_accuracy(model, dataset, flatten_input=False):
     accuracy = 100 * correct / total
     print(f'Accuracy of the {model.__class__.__name__} on the {dataset.upper()} test images: {accuracy}%')
 
-    return accuracy
+    accuracy = correct / total
+    accuracy = round(accuracy, 3)
+
+    return accuracy # [0,1], rounded to three decimal places
