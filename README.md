@@ -9,11 +9,11 @@ A full version report can be found here: [LINK TO PDF]
 
 ## Folder Explanation 
 
-- **Feedback_Alignment**: 
+**Feedback_Alignment**: 
 * A Pytorch implementation of [Random synaptic feedback weights support error backpropagation for deep learning](https://www.nature.com/articles/ncomms13276) based on [L0SG/feedback-alignment-pytorch](https://github.com/L0SG/feedback-alignment-pytorch)
 * Experiments on the blend of Pretrained Convolutional Layers and Feedback Alignment Layers (CNN + FA)
 
-- **semiHebb_learning**: 
+**semiHebb_learning**: 
 * A Pytorch implementation of [HEBBNET: A SIMPLIFIED HEBBIAN LEARNING FRAMEWORK TO DO BIOLOGICALLY PLAUSIBLE LEARNING](https://ieeexplore.ieee.org/document/9414241) from sratch. Original descriptive documentation can be found at [Andy-wyx/biologically_plausible_learning](https://github.com/Andy-wyx/biologically_plausible_learning).
 * Experiments on the blend of Hebbian Layers and Linear Layers (Gupta's HebbNet + fc)
 
@@ -22,7 +22,7 @@ A full version report can be found here: [LINK TO PDF]
   <img src="semiHebb_learning/images/semihebbnet performance on mnist.png" width=400><br/>
 </p>
 
-- **hybridBio_learning**: 
+**hybridBio_learning**: 
 * A PyTorch implementation of [Unsupervised learning by competing hidden units](https://www.pnas.org/doi/10.1073/pnas.1820458116) MNIST classifier based on [gatapia/unsupervised_bio_classifier](https://github.com/gatapia/unsupervised_bio_classifier), combining with Feedback alignment. Original descriptive documentation can be found at [here](https://github.com/clps1291-bioplausnn/hybrid-bioLearning).
 * Experiments on the blend of Krotov's unsupervised layers w/o biocells and Linear Layers (Krotov's HebbNet w/o Biocells + fc)
 * Experiments on the blend of Krotov's unsupervised layers w biocells and Linear Layers (Krotov's HebbNet w Biocells + fc)
