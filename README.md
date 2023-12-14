@@ -53,11 +53,20 @@ A full version final report can be found here: [LINK TO PDF]
 See the final report: [Link to PDF]
 
 ## Future Work
-* Enable GPU mode for semiHebbNet
+
+**Training & Experiments**
 * Try to train semiHebbNet in one phase, find the best learning rate for Hebbian layers and linear layers respectively.
 * More Hyperparameter tuning on these models to compare their Peak Accuracy.
 * Compare Efficiency in the same experimental settings.(same epoch, dataset, lr, hardward etc)
+
+**Algorithms & Learning rules**
+* Implement modified Gupta's update rule
 * Explore more Biologically Plausible Neural Networks e.g. [SCALING FORWARD GRADIENT WITH LOCAL LOSSES](https://arxiv.org/abs/2210.03310)
+
+**Others**
+* Enable GPU mode for semiHebbNet and Feedback Alignment
+* Interpretability: Figure out a way to make XPlique applicable to our models. (our models have no filters as attributes, and are not differentiable sometimes)
+
 
 ## Useful Resources
 Except for torchvision models, [GluonCV](https://github.com/dmlc/gluon-cv/tree/master/gluoncv/model_zoo) includes many pretrained sota models in CV.
