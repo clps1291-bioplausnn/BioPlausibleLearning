@@ -1,4 +1,4 @@
 __pycache__/
 .DS_Store
-BioPlausibleLearning/mnist/
-BioPlausibleLearning/cifar10/
+BioPlausibleLearning/semiHebb_learning/mnist/
+BioPlausibleLearning/semiHebb_learning/cifar10/
