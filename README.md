@@ -4,6 +4,8 @@
 
 **Group members: Xueru MA, Yingwei Song, Yunxi Liang, Yuxiang Wang**
 
+## Introduction
+
 In the pursuit of artificial intelligence that mirrors the deftness of human cognition, the concept of biological plausibility stands as a beacon, guiding the design of neural networks toward the intricate workings of the human brain. A neural network that is considered biologically plausible emulates the structure and functions of the biological nervous system, often with the purpose of improving the performance of neural networks or gaining insights into processes of the biological brain. 
 
 While backpropagation (BP) is a cornerstone in training modern neural networks, it deviates from how biological neural systems function. Key differences include BP's reliance on inter-layer weight dynamics, unlike the local information transmission in biological neurons, its use of symmetric weights for both forward and backward passes which contrasts with the one-directional, asymmetric nature of biological synapses, and its continuous output neuron firing, as opposed to the all-or-none firing based on a threshold in biological neurons. 
@@ -11,7 +13,7 @@ Recognizing these discrepancies, this project focuses on exploring neural networ
 
 A full version final report can be found here: [LINK TO PDF]
 
-# Requirements
+## Requirements
 
 * Python
 * numpy
@@ -20,7 +22,7 @@ A full version final report can be found here: [LINK TO PDF]
 * matplotlib
 * CUDA (for hybridBio_learning)
 
-# Folder Explanation 
+## Folder Explanation 
 
 **Feedback_Alignment**: 
 * A Pytorch implementation of [Random synaptic feedback weights support error backpropagation for deep learning](https://www.nature.com/articles/ncomms13276) based on [L0SG/feedback-alignment-pytorch](https://github.com/L0SG/feedback-alignment-pytorch)
@@ -46,18 +48,18 @@ A full version final report can be found here: [LINK TO PDF]
   <img src="hybridBio_learning/images/accuracy across hybrid models.jpeg" width=600><br/>
 </p>
 
-# Analysis 
+## Analysis 
 
 See the final report: [Link to PDF]
 
-# Future Work
+## Future Work
 * Enable GPU mode for semiHebbNet
 * Try to train semiHebbNet in one phase, find the best learning rate for Hebbian layers and linear layers respectively.
 * More Hyperparameter tuning on these models to compare their Peak Accuracy.
 * Compare Efficiency in the same experimental settings.(same epoch, dataset, lr, hardward etc)
 * Explore more Biologically Plausible Neural Networks e.g. [SCALING FORWARD GRADIENT WITH LOCAL LOSSES](https://arxiv.org/abs/2210.03310)
 
-# Useful Resources
+## Useful Resources
 Except for torchvision models, [GluonCV](https://github.com/dmlc/gluon-cv/tree/master/gluoncv/model_zoo) includes many pretrained sota models in CV.
 
 
