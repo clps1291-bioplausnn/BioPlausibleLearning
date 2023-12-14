@@ -9,23 +9,19 @@ A full version report can be found here: [LINK TO PDF]
 
 ## Folder Explanation 
 
-- **hybridBio_learning**: A PyTorch implementation of “Unsupervised learning by competing hidden units” MNIST classifier, combining with Feedback alignment. Original descriptive documentation can be found at [here](https://github.com/clps1291-bioplausnn/hybrid-bioLearning).
+- **Feedback_Alignment**: 
+* A Pytorch implementation of [Random synaptic feedback weights support error backpropagation for deep learning](https://www.nature.com/articles/ncomms13276) based on [L0SG/feedback-alignment-pytorch](https://github.com/L0SG/feedback-alignment-pytorch)
+* Experiments on the blend of Pretrained Convolutional Layers and Feedback Alignment Layers (CNN + FA)
 
-- **semiHebb_learning**
+- **semiHebb_learning**: 
+* A Pytorch implementation of [HEBBNET: A SIMPLIFIED HEBBIAN LEARNING FRAMEWORK TO DO BIOLOGICALLY PLAUSIBLE LEARNING](https://ieeexplore.ieee.org/document/9414241) from sratch. Original descriptive documentation can be found at [Andy-wyx/biologically_plausible_learning](https://github.com/Andy-wyx/biologically_plausible_learning).
+* Experiments on the blend of Hebbian Layers and Linear Layers (Gupta's HebbNet + fc)
 
-### Pretrain lighter vision models
-Recognizing the need for more accessible alternatives to large pretrained vision models on imagenet, this repo aims to provide models pretrained on smaller datasets like MNIST and CIFAR10. These lighter and more manageable models are pretrained for easy import and utilization, facilitating quick experimentation and integration into projects where resources are limited. 
-
-The MNIST database contains 60,000 training images and 10,000 testing images.
-
-The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.
-
-### Learning rules
-
-### Neural networks
-
-### Evaluation
-
+- **hybridBio_learning**: 
+* A PyTorch implementation of [Unsupervised learning by competing hidden units](https://www.pnas.org/doi/10.1073/pnas.1820458116) MNIST classifier based on [gatapia/unsupervised_bio_classifier](https://github.com/gatapia/unsupervised_bio_classifier), combining with Feedback alignment. Original descriptive documentation can be found at [here](https://github.com/clps1291-bioplausnn/hybrid-bioLearning).
+* Experiments on the blend of Krotov's unsupervised layers w/o biocells and Linear Layers (Krotov's HebbNet w/o Biocells + fc)
+* Experiments on the blend of Krotov's unsupervised layers w biocells and Linear Layers (Krotov's HebbNet w Biocells + fc)
+* Exploration on the blend of Krotov's unsupervised layers w or w/o biocells and Feedback Alignment Layers (Krotov's HebbNet + FA)
 
 
 # Reference:
@@ -38,4 +34,4 @@ The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6
 
 4. [Linear FA implementation](https://github.com/L0SG/feedback-alignment-pytorch)
 
-Except for torchvision models, [GluonCV](https://github.com/dmlc/gluon-cv/tree/master/gluoncv/model_zoo) includes many sota models in CV.
+Except for torchvision models, [GluonCV](https://github.com/dmlc/gluon-cv/tree/master/gluoncv/model_zoo) includes many pretrained sota models in CV.
