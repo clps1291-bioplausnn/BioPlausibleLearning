@@ -1,6 +1,7 @@
 # Biologically plausible neural networks
 
-(Group Project of CLPS1291 Fall 23 @ Brown)
+**Group Project of CLPS1291 Fall 23 @ Brown**
+**Group members: Xueru MA, Yingwei Song, Yunxi Liang, Yuxiang Wang**
 
 In the pursuit of artificial intelligence that mirrors the deftness of human cognition, the concept of biological plausibility stands as a beacon, guiding the design of neural networks toward the intricate workings of the human brain. A neural network that is considered biologically plausible emulates the structure and functions of the biological nervous system, often with the purpose of improving the performance of neural networks or gaining insights into processes of the biological brain. 
 
