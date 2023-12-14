@@ -18,8 +18,8 @@ A full version report can be found here: [LINK TO PDF]
 * Experiments on the blend of Hebbian Layers and Linear Layers (Gupta's HebbNet + fc)
 
 <p align="center">
-  <img src="semiHebb_learning/semihebbnet performance on cifar10.png" width=300>
-  <img src="semiHebb_learning/semihebbnet performance on mnist.png" width=300><br/>
+  <img src="semiHebb_learning/images/semihebbnet performance on cifar10.png" width=300>
+  <img src="semiHebb_learning/images/semihebbnet performance on mnist.png" width=300><br/>
 </p>
 
 - **hybridBio_learning**: 
@@ -29,7 +29,7 @@ A full version report can be found here: [LINK TO PDF]
 * Exploration on the blend of Krotov's unsupervised layers w or w/o biocells and Feedback Alignment Layers (Krotov's HebbNet + FA)
 
 <p align="center">
-  <img src="hybridBio_learning/accuracy across hybrid models.png" width=500><br/>
+  <img src="hybridBio_learning/images/accuracy across hybrid models.png" width=500><br/>
 </p>
 
 
