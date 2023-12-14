@@ -17,11 +17,20 @@ A full version report can be found here: [LINK TO PDF]
 * A Pytorch implementation of [HEBBNET: A SIMPLIFIED HEBBIAN LEARNING FRAMEWORK TO DO BIOLOGICALLY PLAUSIBLE LEARNING](https://ieeexplore.ieee.org/document/9414241) from sratch. Original descriptive documentation can be found at [Andy-wyx/biologically_plausible_learning](https://github.com/Andy-wyx/biologically_plausible_learning).
 * Experiments on the blend of Hebbian Layers and Linear Layers (Gupta's HebbNet + fc)
 
+<p align="center">
+  <img src="semiHebb_learning/semihebbnet performance on cifar10.png" width=300>
+  <img src="semiHebb_learning/semihebbnet performance on mnist.png" width=300><br/>
+</p>
+
 - **hybridBio_learning**: 
 * A PyTorch implementation of [Unsupervised learning by competing hidden units](https://www.pnas.org/doi/10.1073/pnas.1820458116) MNIST classifier based on [gatapia/unsupervised_bio_classifier](https://github.com/gatapia/unsupervised_bio_classifier), combining with Feedback alignment. Original descriptive documentation can be found at [here](https://github.com/clps1291-bioplausnn/hybrid-bioLearning).
 * Experiments on the blend of Krotov's unsupervised layers w/o biocells and Linear Layers (Krotov's HebbNet w/o Biocells + fc)
 * Experiments on the blend of Krotov's unsupervised layers w biocells and Linear Layers (Krotov's HebbNet w Biocells + fc)
 * Exploration on the blend of Krotov's unsupervised layers w or w/o biocells and Feedback Alignment Layers (Krotov's HebbNet + FA)
+
+<p align="center">
+  <img src="hybridBio_learning/accuracy across hybrid models.png" width=500><br/>
+</p>
 
 
 # Reference:
