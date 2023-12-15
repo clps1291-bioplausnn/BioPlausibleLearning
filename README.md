@@ -11,7 +11,7 @@ In the pursuit of artificial intelligence that mirrors the deftness of human cog
 While backpropagation (BP) is a cornerstone in training modern neural networks, it deviates from how biological neural systems function. Key differences include BP's reliance on inter-layer weight dynamics, unlike the local information transmission in biological neurons, its use of symmetric weights for both forward and backward passes which contrasts with the one-directional, asymmetric nature of biological synapses, and its continuous output neuron firing, as opposed to the all-or-none firing based on a threshold in biological neurons. 
 Recognizing these discrepancies, this project focuses on exploring neural network techniques that better mimic human brain functions. The aim is to investigate how these biologically inspired alternatives to backpropagation could enhance the performance and interpretability of neural networks. 
 
-A full version final report can be found here: [LINK TO PDF]
+A full version final report can be found here: [Link to PDF](https://drive.google.com/file/d/1vNR2_Zl2dUUqZXJD4dM0S40fykQckE5V/view?usp=drive_link)
 
 ## Requirements
 
@@ -50,7 +50,7 @@ A full version final report can be found here: [LINK TO PDF]
 
 ## Analysis 
 
-See the final report: [Link to PDF]
+See the final report: [Link to PDF](https://drive.google.com/file/d/1vNR2_Zl2dUUqZXJD4dM0S40fykQckE5V/view?usp=drive_link)
 
 ## Future Work
 
